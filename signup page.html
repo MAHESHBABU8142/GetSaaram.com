@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SignUp</title>
+        <link rel="stylesheet" type="text/css" href="GetSaaram.css">
+    </head>
+    <body id="signup-page">
+        <h1 id="brandName"><span>G</span>et<span>S</span>aaram</h1>
+        <h2 id="create-account-headline">Create an Account</h2>
+        <form id="login-signup-form">
+            <div>
+             
+              <button class="login-signup-headline" id="signup-headline">SignUp <hr> </button> 
+              <button class="login-signup-headline" id="login-headline">Login  </button> 
+            </div>
+          
+              <label for="name">FULL NAME :
+                <input id="name" type="name" placeholder="Enter your full name" required>
+              </label>
+
+              <label for="email">EMAIL :
+                <input id="email" type="email" placeholder="Enter Email"  required>
+              </label>
+             
+              <label for="password">PASSWORD :
+                <input id="password" type="password" placeholder="Enter Password"  required>
+              </label>
+             
+              <label for="confirm-password">CONFIRM PASSWORD :
+                <input id="confirm-password" type="password" placeholder="Confirm password" required>
+              </label>
+
+              <div id="checkbox-label">
+                <input id="signup-checkbox" type="checkbox"  required>
+                <p id="terms-conditions">I agree to the Terms & Conditions</p>
+               </div>
+                <div>
+               <button type="submit" id="login-signup-btn">Login</button>
+               </div>
+            </form>
+        
+
+
+
+            <script>
+                let loginBtn= document.getElementById("login-headline") ;
+                 loginBtn.addEventListener("click",function swipsignup(){
+                 let signupBtn=document.getElementById("signup-headline") ;
+                 let signupHrLine =signupBtn.children[0];
+                   signupBtn.removeChild(signupHrLine) ;
+                    document.getElementById("confirm-password").remove();
+                 let hrLine=document.createElement("hr") ;
+                     loginBtn.appendChild(hrLine) ;
+                  document.getElementById("create-account-headline").innerText="Login into your account";
+                }) ;
+            </script>
+    </body>
+</html>
