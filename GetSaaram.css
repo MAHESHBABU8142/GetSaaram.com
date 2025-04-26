@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cookie&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Telex&family=Zen+Antique&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cookie&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Telex&family=Zen+Antique&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cookie&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Telex&family=Zen+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cookie&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Telex&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&family=Zen+Antique&display=swap');
 *{
   padding: 0;
   margin: 0;
@@ -11,6 +12,10 @@
 
 #home-page {
   background-color: #0c142b;
+  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #0f2027);
+  background-size: 800% 800%;
+  animation: gradientAnimation 25s ease infinite;
+
 }
 #home-page #nav-list {
   color: white;
@@ -25,7 +30,7 @@
   font-size: 1.1rem;
   position: absolute;
   height:100%;
-  z-index: 1;
+  z-index: 2;
 
    }
    #nav-list #home {
@@ -117,10 +122,97 @@
    }
    #join-btn:hover{
     transition: 0.4s;
-    background-color:rgb(12, 125, 139);
+    background-color:rgb(18, 178, 199);
     color: white;
+    box-shadow: 0px 5px 15px rgba(56, 182, 255, 0.5);
    }
   
    /*-------home-page---hero----styling---------*/
 
+      #hero  {
+    display: flex;
+   margin-top: 2rem;
+   }
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+   #hero-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    margin-top: 13rem;
+    text-align: center;
+   }
+   @keyframes img-motion {
+    from {
+      transform: translateX(30px);
+    }
+    to {
+        transform: translateX(0);
+    }
+  }
+  #welcome-line {
+    font-family: "Zain", sans-serif;
+    font-size: 3rem;
+    animation: img-motion 1.2s ease forwards;
+  }
+  #hero-heading {
+    font-family: "Atkinson Hyperlegible Mono", sans-serif;
+    color: #00ffff;
+    font-size: 1.7rem;
+    font-weight: bold;
+    animation: img-motion 1.4s ease forwards;
+  }
+  #discription-getsaaram {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 1rem;
+    line-height: 1.45;
+    animation: img-motion 1.5s ease forwards;
+  }
+     #hero-img {
+      animation: img-motion 2s ease forwards;
+      width: 100%;
+      height: 100%;
+      
+      
+    }
+       #hero-buttons {
+        display: flex;
+        gap:2rem;
+        padding: 1rem;
+       }
+       .hero-btn {
+        border: none;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size:1.1rem;
+        padding:0.4rem 0.7rem;
+        border-radius: 0.5rem;
+        background-color: #ffd700;
+       }
+       .hero-btn:hover {
+        background-color:inherit;
+        color:white;
+        border: 2px solid white;
+        transform: scale(1.05);
+        box-shadow: 0px 5px 15px rgba(56, 182, 255, 0.5);
+      }
+      
+       #explore-btn {
+        background-color: inherit;
+        color: white;
+        border: 2px solid white;
+       }
+       #explore-btn:hover {
+        background-color:  #ffd700;
+        color:black;
+        border: 2px solid  #ffd700;
+       }
   
