@@ -77,8 +77,18 @@
                 <h2 class="feature-headline">Quizzes & Challenges</h2>
                 <p class="feature-discription">Test yourself with quick quizzes and exciting challenges.</p>
                </div>
-             
-        </section>
+             <button id="explore-now-btn">Explore Now</button>
+        </section> <hr>
+
+          <!-------home-page-feedback-markup-------->
+           <section id="feedback">
+            <h1 id="feedback-headline">We value your feedback!</h1>
+            <p id="feedback-discription">Your thoughts help us improve GetSaaram.</p>
+           <form id="feedback-form">
+              <textarea placeholder="Share your feedback...." id="feedback-area" required></textarea><br>
+              <button id="feedback-btn" type="submit">Submit</button>
+           </form>
+           </section>
 
         <!-------home-page-footer-markup-------->
 
@@ -100,5 +110,11 @@
          closeBtn.addEventListener("click",function closeList(){
             menuList.style.display="none";
         }) ;
+
+        /*-----feedback-form---script----*/
+         let submitBtn=document.getElementById("feedback-btn") ;
+         submitBtn.addEventListener("click",function showFeedback(){
+            alert("Thank you for your feedback")
+         });
     </script>
 </html>
