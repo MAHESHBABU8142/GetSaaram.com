@@ -10,11 +10,12 @@
     <body id="home-page">
         <ul id="nav-list">
             <button id="close-btn">&times;</button>
-            <li id="home" class="nav-item">Home</li>
+
+           <a href="index.html"> <li id="home" class="nav-item">Home</li></a>
             <li class="nav-item">Learning Resources </li>
             <li class="nav-item">Interactive Tools</li>
             <li class="nav-item">Student Toolkit</li>
-            <li class="nav-item">About Us</li>
+            <a id="aa" href="about.html"><li class="nav-item">About Us</li></a>
             <li class="nav-item">Login</li>
          </ul> 
         <!---------home-page-header--markup---------->
@@ -97,24 +98,6 @@
         </footer>
     </body>
 
-    
-
-
-    <script>
-        let menuBtn=document.getElementById("menu-btn");
-        let menuList=document.getElementById("nav-list") ;
-        menuBtn.addEventListener("click",function showList(){
-            menuList.style.display="flex";
-        }) ;
-        let closeBtn=document.getElementById("close-btn") ;
-         closeBtn.addEventListener("click",function closeList(){
-            menuList.style.display="none";
-        }) ;
-
-        /*-----feedback-form---script----*/
-         let submitBtn=document.getElementById("feedback-btn") ;
-         submitBtn.addEventListener("click",function showFeedback(){
-            alert("Thank you for your feedback")
-         });
-    </script>
+    <!--home-page-script-->
+    <script src="GetSaaram.js"></script>
 </html>
